@@ -27,37 +27,43 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-        if (args.length < 3) {
+        if (args.length < 3)
             System.out.println("You have to insert number1, operator, number2");
-        } else {
+        else {
 
-            float num1 = (float) Double.parseDouble(args[0]);
-            float num2 = (float) Double.parseDouble(args[2]);
-            String oper = args[1];
+            try {
+                float num1 = Float.parseFloat(args[0]);
+                float num2 = Float.parseFloat(args[2]);
+                String oper = args[1];
 
-            switch (oper) {
-                case "+":
-                    System.out.println(sum(num1, num2));
-                    break;
-                case "-":
-                    System.out.println(sub(num1, num2));
-                    break;
-                case "x":
-                    System.out.println(mult(num1, num2));
-                    break;
+                switch (oper) {
+                    case "+":
+                        System.out.println(sum(num1, num2));
+                        break;
+                    case "-":
+                        System.out.println(sub(num1, num2));
+                        break;
+                    case "x":
+                        System.out.println(mult(num1, num2));
+                        break;
 
-                case "/":
-                    System.out.println(div(num1, num2));
-                    break;
+                    case "/":
+                        System.out.println(div(num1, num2));
+                        break;
 
-                case "%":
-                    System.out.println(mod(num1, num2));
-                    break;
+                    case "%":
+                        System.out.println(mod(num1, num2));
+                        break;
 
-                default:
-                    System.out.println("Wrong operation");
-                    break;
+                    default:
+                        System.out.println("Wrong operation");
+                        break;
+                }
+
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid numbers inserted");
             }
+
         }
 
     }
