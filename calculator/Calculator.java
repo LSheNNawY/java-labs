@@ -61,7 +61,7 @@ public class Calculator {
                 }
 
             } catch (NumberFormatException e) {
-                System.err.println("Invalid numbers inserted");
+                System.out.println("Invalid numbers inserted");
             }
 
         }
