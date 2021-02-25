@@ -1,0 +1,8 @@
+.root {
+    -fx-border-radius: 10px;
+}
+.text-area {
+    -fx-font-size: 20px;
+    -fx-font-family: Dialog;
+    -fx-font-style: italic;
+}

@@ -6,14 +6,8 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
-import java.util.Optional;
 
 import javax.swing.*;
-
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.control.Alert.AlertType;
 
 public class ChatClient extends JFrame {
 

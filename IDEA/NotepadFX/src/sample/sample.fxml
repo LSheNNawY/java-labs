@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="20" stylesheets="@../styles/style.css" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <BorderPane prefHeight="901.0" prefWidth="1104.0">
+         <top>
+            <MenuBar styleClass="menuBar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" styleClass="menu" text="File">
+                  <items>
+                        <MenuItem id="newFileItem" mnemonicParsing="false" onAction="#newFileAction" styleClass="fileItem" text="New">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem id="openFileItem" mnemonicParsing="false" onAction="#openFileAction" styleClass="fileItem" text="Open">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem id="saveFileItem" mnemonicParsing="false" onAction="#saveFileAction" styleClass="fileItem" text="Save">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem id="closeFileItem" mnemonicParsing="false" onAction="#closeFileAction" styleClass="fileItem" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="menu" text="Edit">
+                  <items>
+                        <MenuItem id="cutEditItem" mnemonicParsing="false" onAction="#cutAction" styleClass="editItem" text="Cut" />
+                        <MenuItem id="copyEditItem" mnemonicParsing="false" onAction="#copyAction" styleClass="editItem" text="Copy" />
+                        <MenuItem id="pasteEditItem" mnemonicParsing="false" onAction="#pasteAction" styleClass="editItem" text="Paste" />
+                        <MenuItem id="deleteEditItem" mnemonicParsing="false" onAction="#deleteAction" styleClass="editItem" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem id="selectallEditItem" mnemonicParsing="false" onAction="#selectAllAction" styleClass="editItem" text="Select All" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="menu" text="About">
+                  <items>
+                    <MenuItem id="aboutAboutitem" mnemonicParsing="false" onAction="#aboutAction" styleClass="aboutItem" text="About FxNotpad" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TextArea id="textArea" fx:id="textArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="textArea" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+         </center>
+      </BorderPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
